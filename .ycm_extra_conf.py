@@ -1,10 +1,10 @@
-import os
-import os.path
-import fnmatch
-import logging
+import os  
+import os.path  
+import fnmatch  
+import logging  
 import ycm_core
 
-BASE_FLAGS = [
+BASE_FLAGS = [  
     '-Wall',
     '-Wextra',
     '-Werror',
@@ -12,15 +12,14 @@ BASE_FLAGS = [
     '-Wno-variadic-macros',
     '-fexceptions',
     '-ferror-limit=10000',
+    '-DNDEBUG',
     '-std=c++14',
     '-xc++',
-    '-I/usr/lib/gcc/x86_64-pc-linux-gnu/5.4.0/include'
-    '-I/usr/local/include'
-    '-I/usr/lib/clang/3.8.1/include'
-    '-I/usr/include'
+    '-I/usr/lib/'
+    '-I/usr/include/'
 ]
 
-SOURCE_EXTENSIONS = [
+SOURCE_EXTENSIONS = [  
     '.cpp',
     '.cxx',
     '.cc',
@@ -29,18 +28,18 @@ SOURCE_EXTENSIONS = [
     '.mm'
 ]
 
-HEADER_EXTENSIONS = [
+HEADER_EXTENSIONS = [  
     '.h',
     '.hxx',
     '.hpp',
     '.hh'
 ]
 
-def IsHeaderFile(filename):
+def IsHeaderFile(filename):  
     extension = os.path.splitext(filename)[1]
     return extension in HEADER_EXTENSIONS
 
-def GetCompilationInfoForFile(database, filename):
+def GetCompilationInfoForFile(database, filename):  
     if IsHeaderFile(filename):
         basename = os.path.splitext(filename)[0]
         for extension in SOURCE_EXTENSIONS:
@@ -48,11 +47,13 @@ def GetCompilationInfoForFile(database, filename):
             if os.path.exists(replacement_file):
                 compilation_info = database.GetCompilationInfoForFile(replacement_file)
                 if compilation_info.compiler_flags_:
+                    logging.info("found flags for " + filename + " : " + compilation_info)
                     return compilation_info
         return None
+    logging.info("found flags for " + filename + " : " + database.GetCompilationInfoForFile(filename))
     return database.GetCompilationInfoForFile(filename)
 
-def FindNearest(path, target):
+def FindNearest(path, target):  
     candidate = os.path.join(path, target)
     if(os.path.isfile(candidate) or os.path.isdir(candidate)):
         logging.info("Found nearest " + target + " at " + candidate)
@@ -63,7 +64,7 @@ def FindNearest(path, target):
             raise RuntimeError("Could not find " + target);
         return FindNearest(parent, target)
 
-def MakeRelativePathsInFlagsAbsolute(flags, working_directory):
+def MakeRelativePathsInFlagsAbsolute(flags, working_directory):  
     if not working_directory:
         return list(flags)
     new_flags = []
@@ -92,7 +93,7 @@ def MakeRelativePathsInFlagsAbsolute(flags, working_directory):
     return new_flags
 
 
-def FlagsForClangComplete(root):
+def FlagsForClangComplete(root):  
     try:
         clang_complete_path = FindNearest(root, '.clang_complete')
         clang_complete_flags = open(clang_complete_path, 'r').read().splitlines()
@@ -100,19 +101,19 @@ def FlagsForClangComplete(root):
     except:
         return None
 
-def FlagsForInclude(root):
+def FlagsForInclude(root):  
     try:
         include_path = FindNearest(root, 'include')
         flags = []
         for dirroot, dirnames, filenames in os.walk(include_path):
             for dir_path in dirnames:
                 real_path = os.path.join(dirroot, dir_path)
-                flags = flags + ["-I" +real_path]
+                flags = flags + ["-I" + real_path]
         return flags
     except:
         return None
 
-def FlagsForCompilationDatabase(root, filename):
+def FlagsForCompilationDatabase(root, filename):  
     try:
         compilation_db_path = FindNearest(root, 'compile_commands.json')
         compilation_db_dir = os.path.dirname(compilation_db_path)
@@ -125,25 +126,27 @@ def FlagsForCompilationDatabase(root, filename):
         if not compilation_info:
             logging.info("No compilation info for " + filename + " in compilation database")
             return None
+
+        logging.info(str(compilation_info.compiler_flags_))
         return MakeRelativePathsInFlagsAbsolute(
             compilation_info.compiler_flags_,
             compilation_info.compiler_working_dir_)
     except:
         return None
 
-def FlagsForFile(filename):
+def FlagsForFile(filename):  
     root = os.path.realpath(filename);
     compilation_db_flags = FlagsForCompilationDatabase(root, filename)
     if compilation_db_flags:
-        final_flags = compilation_db_flags + BASE_FLAGS
+        final_flags = compilation_db_flags
     else:
         final_flags = BASE_FLAGS
         clang_flags = FlagsForClangComplete(root)
         if clang_flags:
             final_flags = final_flags + clang_flags
-            # include_flags = FlagsForInclude(root)
-        # if include_flags:
-            # final_flags = final_flags + include_flags
+        include_flags = FlagsForInclude(root)
+        if include_flags:
+            final_flags = final_flags + include_flags
     return {
         'flags': final_flags,
         'do_cache': True

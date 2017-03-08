@@ -1,0 +1,9 @@
+.emacs.d/elpa
+.emacs.d/backup
+.emacs.d/auto-save-list
+.emacs.d/keys
+.config/nvim/dein/.cache
+.vim/plugged
+.config/nvim/dein/repos
+.tmux/plugins
+.tmux/resurrect

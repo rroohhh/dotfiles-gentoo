@@ -1,0 +1,33 @@
+l
+ls
+alias l="ls -lah"
+l
+l
+(l)
+ls -lah
+l
+alias l="ls -lah"
+l
+ls -lah
+cd
+cd tmp/
+cd ..
+cd hardware/
+l
+cd software/
+ls
+cd driver
+ls
+ls -lah
+od
+l
+l
+ls
+l
+alias l 'ls -lah $*'
+l
+make
+./../../start_shell.sh
+LC_ALL=C nmcli -t -f active,ssid dev wifi | egrep '^yes' | sed 's/yes://g'
+cd
+LC_ALL=C nmcli -t -f active,ssid dev wifi | egrep '^yes' | sed 's/yes://g'

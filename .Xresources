@@ -8,6 +8,7 @@
 
 *renderFont: true
 xterm*faceName: Hack:size=11:antialias=true
+xterm*borderWidth: 0
 *font: Hack:size=11
 ! URxvt*font: xft:Hack:size=11:antialias=true
 !*font: -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1q
@@ -54,11 +55,7 @@ Xft.rgba: rgb
 ! urxvt*fading: white
 URxvt*scrollBar:        false
 ! urxvt*tintColor: #ffffff
-URxvt*font:	xft:Hack:size=11:antialias=true, \
-		xft:FontAwesome:size=11:antialias=true, \
-		xft:DejaVu Sans Mono:size=11:antialias=true, \
-		xft:Droid Sans Fallback:antialias=true, \
-		xft:Droid Sans Japanese:antialias=true
+URxvt*font:	xft:Hack:size=11:antialias=true,xft:FontAwesome:size=11:antialias=true,xft:DejaVu Sans Mono:size=11:antialias=true,xft:Droid Sans Fallback:antialias=true,xft:Droid Sans Japanese:antialias=true
 	
 ! make alt work in emacs
 xterm*metaSendsEscape: true

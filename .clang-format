@@ -18,3 +18,4 @@ AlignConsecutiveDeclarations: true
 Standard: Auto
 Cpp11BracedListStyle: true
 AlwaysBreakTemplateDeclarations: true
+UseTab: Never

@@ -11,11 +11,17 @@ set $mod Mod4
 #client.focused_inactive  #000000 #000000 #ffffff #000000 #ffffff
 #client.urgent		 #fb4934 #ebdbb2 #ffffff #ebdbb2 #ffffff
 
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #fabd2f
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+#client.focused          #4c7899 #285577 #ffffff #2e9ef4   #fabd2f
+#client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+#client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+#client.urgent           #2f343a #900000 #ffffff #900000   #900000
+#client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.focused          #282828 #282828 #ebdbb2 #666666   #5f676a
+client.focused_inactive #282828 #282828 #ebdbb2 #383838   #383838
+client.unfocused        #383838 #383838 #ebdbb2 #383838   #222222
+client.urgent           #2f343a #900000 #ebdbb2 #383838   #900000
+client.placeholder      #000000 #0c0c0c #ebdbb2 #383838   #ffffff
 
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -38,7 +44,9 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-# start tinyterm
+# start terminal
+#bindsym $mod+Return exec urxvt
+#bindsym $mod+Return exec xterm
 bindsym $mod+Return exec urxvtc
 
 # kill focused window
@@ -50,7 +58,7 @@ bindsym XF86MonBrightnessUp exec zsh -c '/home/robin/projects/hwinfo/bin/hwinfo 
 bindsym XF86MonBrightnessDown exec zsh -c '/home/robin/projects/hwinfo/bin/hwinfo backlight brightness $(($(/home/robin/projects/hwinfo/bin/hwinfo backlight brightness) - 50))'
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +5% 
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
@@ -99,10 +107,10 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -161,8 +169,8 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-assign [class=Emacs] $ws1
-assign [class=chromium] $ws2
+#assign [class=Emacs] $ws1
+#assign [class=chromium] $ws2
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -253,10 +261,10 @@ bar {
    }
 }
 
-for_window [class="*xterm*"] border pixel 0
-for_window [class="^.*"] border pixel 1
+for_window [class="*xterm*"] border pixel 3
+for_window [class="^.*"] border pixel 3
 for_window [instance="__scratchpad"] move scratchpad 
-# set border pixel 3
+#set border pixel 3
 gaps inner 10
 gaps outer 7
 smart_gaps on
@@ -301,7 +309,8 @@ mode "$mode_gaps_outer" {
 
 # exec conky -c ~/.config/i3/lemonbar/empty_conky
 # exec bash ~/.config/i3/lemonbar/i3_lemonbar.sh
-exec bash /home/robin/.fehbg
+#exec bash /home/robin/.fehbg
+exec xsetroot -solid "#383838"
 exec bash /home/robin/.bashrc
 # exec bash /home/robin/.load_layout.sh
 # exec --no-startup-id /home/robin/scripts/active_border.sh
@@ -309,5 +318,6 @@ exec bash /home/robin/.bashrc
 # exec --no-startup-id  "sleep 1; i3-msg '[instance=tinyterm] mark tinyterm_scratch, move scratchpad'"
 # exec --no-startup-id "sleep 2; unset TMUX; tmux new"
 exec emacsclient -c
+# exec compton -b
 #exec /usr/bin/e
 # exec /usr/bin/chromium

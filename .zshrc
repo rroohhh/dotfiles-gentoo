@@ -1,28 +1,8 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/robin/.oh-my-zsh
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="avit"
+export ZSH=/home/robin/.oh-my-zsh
+export RUST_SRC_PATH='/usr/src/rustc-1.14.0/src'
+source ~/.vim/plugged/gruvbox/gruvbox_256palette.sh
 KEYTIMEOUT=1
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
@@ -33,35 +13,7 @@ ENABLE_CORRECTION="true"
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-if [[ -z ${DISPLAY+x} ]] then
-	ZSH_TMUX_AUTOSTART="false"
-else
-	ZSH_TMUX_AUTOSTART="true"
-fi
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux vi-mode zsh-syntax-highlighting)
-
-# User configuration
-
-# export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-# export MANPATH="/usr/local/man:$MANPATH"
+plugins=(git vi-mode zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -71,27 +23,50 @@ zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=*'
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
-else
-  export EDITOR='nvim'
+export EDITOR='nvim'
+
+source ~/prompt.sh
+
+export PATH=$PATH:/home/robin/projects/hwinfo/bin:/home/robin/.fzf/bin/
+alias f='vim $(fzf)'
+alias wr='wget -r -nc'
+alias vi=nvim
+alias vim=nvim
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+GPG_TTY=$(tty)
+export GPG_TTY
+if ! pgrep -x -u "${USER}" gpg-agent >/dev/null 2>&1; then
+    eval `gpg-agent --daemon --pinentry-program /usr/bin/pinentry-tty`
 fi
+export GOPATH=$HOME/.go
+ix() {
+    local opts
+    local OPTIND
+    [ -f "$HOME/.netrc" ] && opts='-n'
+    while getopts ":hd:i:n:" x; do
+        case $x in
+            h) echo "ix [-d ID] [-i ID] [-n N] [opts]"; return;;
+            d) $echo curl $opts -X DELETE ix.io/$OPTARG; return;;
+            i) opts="$opts -X PUT"; local id="$OPTARG";;
+            n) opts="$opts -F read:1=$OPTARG";;
+        esac
+    done
+    shift $(($OPTIND - 1))
+    [ -t 0 ] && {
+        local filename="$1"
+        shift
+        [ "$filename" ] && {
+            curl $opts -F f:1=@"$filename" $* ix.io/$id
+            return
+        }
+        echo "^C to cancel, ^D to send."
+    }
+    curl $opts -F f:1='<-' $* ix.io/$id
+}
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+if [ -z "$TMUX" ]; then; tmux new-session -t robin_main; fi;
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-source "/usr/lib64/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh"
-powerline-daemon > /dev/null 2>&1
-
-export PATH=$PATH:/home/robin/projects/hwinfo/bin
+# added by travis gem
+[ -f /home/robin/.travis/travis.sh ] && source /home/robin/.travis/travis.sh
