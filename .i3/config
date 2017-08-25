@@ -30,7 +30,7 @@ client.placeholder      #000000 #0c0c0c #ebdbb2 #383838   #ffffff
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+#font pango:DejaVu Sans Mono 8
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -47,7 +47,8 @@ floating_modifier $mod
 # start terminal
 #bindsym $mod+Return exec urxvt
 #bindsym $mod+Return exec xterm
-bindsym $mod+Return exec urxvtc
+#bindsym $mod+Return exec urxvtc
+bindsym $mod+Return exec /home/robin/projects/alacritty/target/release/alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -56,8 +57,10 @@ bindsym $mod+Shift+q kill
 
 bindsym XF86MonBrightnessUp exec zsh -c '/home/robin/projects/hwinfo/bin/hwinfo backlight brightness $(($(/home/robin/projects/hwinfo/bin/hwinfo backlight brightness) + 50))'
 bindsym XF86MonBrightnessDown exec zsh -c '/home/robin/projects/hwinfo/bin/hwinfo backlight brightness $(($(/home/robin/projects/hwinfo/bin/hwinfo backlight brightness) - 50))'
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +5% 
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -5%
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +5% 
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% 
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
@@ -80,15 +83,15 @@ bindsym $mod+d exec rofi -show run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
+bindsym $mod+s focus left
+bindsym $mod+n focus down
+bindsym $mod+t focus up
 bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
+bindsym $mod+Shift+s move left
+bindsym $mod+Shift+n move down
+bindsym $mod+Shift+t move up
 bindsym $mod+Shift+l move right
 
 # split in horizontal orientation
@@ -102,7 +105,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+# bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -174,6 +177,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
+# bindsym $mod+q exec chromium
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
@@ -309,8 +313,8 @@ mode "$mode_gaps_outer" {
 
 # exec conky -c ~/.config/i3/lemonbar/empty_conky
 # exec bash ~/.config/i3/lemonbar/i3_lemonbar.sh
-#exec bash /home/robin/.fehbg
-exec xsetroot -solid "#383838"
+exec bash /home/robin/.fehbg
+# exec xsetroot -solid "#383838"
 exec bash /home/robin/.bashrc
 # exec bash /home/robin/.load_layout.sh
 # exec --no-startup-id /home/robin/scripts/active_border.sh

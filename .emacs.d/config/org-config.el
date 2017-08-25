@@ -17,6 +17,11 @@
 (setq org-latex-listings 'minted)
 (setq org-latex-minted-options
 	  '(("tabsize" "4")))
+(setq org-confirm-babel-evaluate nil)
+
+(org-babel-do-load-languages
+   'org-babel-load-languages
+   '((python . t)))
 
 (use-package org-bullets
   :demand)
@@ -47,13 +52,13 @@
 			(make-variable-buffer-local 'yas-trigger-key)
 			(setq yas-trigger-key [tab])
 			(add-to-list 'org-tab-first-hook 'yas-org-very-safe-expand)
-			(define-key yas-keymap [tab] 'yas-next-field)))
+			(define-key yas-keymap [tab] 'yas-next-field-or-maybe-expand)))
 
 ;; (use-package org-beautify-theme
 ;;   :demand)
 
 (defun org-move-tree (filename)
-  "move the sub-tree which contains the point to a file,
+  "move the sub-tree which contain the point to FILENAME,
 and replace it with a link to the newly created file"
   (interactive "F")
   (org-mark-subtree)

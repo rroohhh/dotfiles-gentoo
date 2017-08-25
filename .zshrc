@@ -27,11 +27,13 @@ export EDITOR='nvim'
 
 source ~/prompt.sh
 
-export PATH=$PATH:/home/robin/projects/hwinfo/bin:/home/robin/.fzf/bin/
+export PATH=$PATH:/home/robin/projects/hwinfo/bin:/home/robin/.fzf/bin/:/home/robin/projects/exa/target/release
 alias f='vim $(fzf)'
 alias wr='wget -r -nc'
 alias vi=nvim
 alias vim=nvim
+alias ls=exa
+alias l="exa -l"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -65,8 +67,12 @@ ix() {
     }
     curl $opts -F f:1='<-' $* ix.io/$id
 }
+bindkey -M vicmd -- t up-line-or-history
+bindkey -M vicmd -- n down-line-or-history
 
 if [ -z "$TMUX" ]; then; tmux new-session -t robin_main; fi;
+alias mnt="mount | column  --table-columns DEVICE,STATUS,PATH,' ',TYPE,OPTIONS -o ' │ ' -t"
 
 # added by travis gem
 [ -f /home/robin/.travis/travis.sh ] && source /home/robin/.travis/travis.sh
+

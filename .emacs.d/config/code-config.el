@@ -7,7 +7,8 @@
   :demand
   :diminish yas-minor-mode
   :config
-  (yas-global-mode))
+  (yas-global-mode)
+  (setq yas-triggers-in-field t))
 
 (use-package flycheck
   :demand
@@ -90,6 +91,7 @@
 (add-to-list 'electric-pair-pairs '(?\$ . ?\$))
 
 (global-prettify-symbols-mode)
+(setq prettify-symbols-unprettify-at-point t)
 (setq-default indent-tabs-mode nil)
 
 (provide 'code-config)

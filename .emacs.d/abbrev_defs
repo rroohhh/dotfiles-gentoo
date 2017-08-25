@@ -1,0 +1,265 @@
+;;-*-coding: utf-8;-*-
+(define-abbrev-table 'Buffer-menu-mode-abbrev-table '())
+
+(define-abbrev-table 'Custom-mode-abbrev-table '())
+
+(define-abbrev-table 'Info-edit-mode-abbrev-table '())
+
+(define-abbrev-table 'awk-mode-abbrev-table
+  '(
+   ))
+
+(define-abbrev-table 'bookmark-bmenu-mode-abbrev-table '())
+
+(define-abbrev-table 'bookmark-edit-annotation-mode-abbrev-table '())
+
+(define-abbrev-table 'c++-mode-abbrev-table
+  '(
+   ))
+
+(define-abbrev-table 'c-mode-abbrev-table
+  '(
+   ))
+
+(define-abbrev-table 'calendar-mode-abbrev-table '())
+
+(define-abbrev-table 'cargo-process-mode-abbrev-table '())
+
+(define-abbrev-table 'change-log-mode-abbrev-table '())
+
+(define-abbrev-table 'cmake-mode-abbrev-table '())
+
+(define-abbrev-table 'comint-mode-abbrev-table '())
+
+(define-abbrev-table 'completion-list-mode-abbrev-table '())
+
+(define-abbrev-table 'css-mode-abbrev-table '())
+
+(define-abbrev-table 'debugger-mode-abbrev-table '())
+
+(define-abbrev-table 'diary-fancy-display-mode-abbrev-table '())
+
+(define-abbrev-table 'diary-mode-abbrev-table '())
+
+(define-abbrev-table 'diff-mode-abbrev-table '())
+
+(define-abbrev-table 'dig-mode-abbrev-table '())
+
+(define-abbrev-table 'display-time-world-mode-abbrev-table '())
+
+(define-abbrev-table 'doctex-mode-abbrev-table '())
+
+(define-abbrev-table 'edebug-eval-mode-abbrev-table '())
+
+(define-abbrev-table 'edit-abbrevs-mode-abbrev-table '())
+
+(define-abbrev-table 'elisp-byte-code-mode-abbrev-table '())
+
+(define-abbrev-table 'emacs-lisp-mode-abbrev-table '())
+
+(define-abbrev-table 'evil-command-window-mode-abbrev-table '())
+
+(define-abbrev-table 'evil-list-view-mode-abbrev-table '())
+
+(define-abbrev-table 'flycheck-error-list-mode-abbrev-table '())
+
+(define-abbrev-table 'fundamental-mode-abbrev-table '())
+
+(define-abbrev-table 'global-abbrev-table '())
+
+(define-abbrev-table 'gnuplot-mode-abbrev-table '())
+
+(define-abbrev-table 'grep-mode-abbrev-table '())
+
+(define-abbrev-table 'helm-ag-mode-abbrev-table '())
+
+(define-abbrev-table 'helm-grep-mode-abbrev-table '())
+
+(define-abbrev-table 'helm-major-mode-abbrev-table '())
+
+(define-abbrev-table 'helm-moccur-mode-abbrev-table '())
+
+(define-abbrev-table 'help-mode-abbrev-table '())
+
+(define-abbrev-table 'ibuffer-mode-abbrev-table '())
+
+(define-abbrev-table 'idl-mode-abbrev-table '())
+
+(define-abbrev-table 'image-dired-display-image-mode-abbrev-table '())
+
+(define-abbrev-table 'image-dired-thumbnail-mode-abbrev-table '())
+
+(define-abbrev-table 'java-mode-abbrev-table
+  '(
+   ))
+
+(define-abbrev-table 'latex-mode-abbrev-table '())
+
+(define-abbrev-table 'lisp-mode-abbrev-table '())
+
+(define-abbrev-table 'log-edit-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-cherry-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-diff-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-log-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-log-select-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-merge-preview-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-popup-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-process-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-reflog-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-refs-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-repolist-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-revision-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-stash-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-stashes-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-status-mode-abbrev-table '())
+
+(define-abbrev-table 'message-mode-abbrev-table '())
+
+(define-abbrev-table 'messages-buffer-mode-abbrev-table '())
+
+(define-abbrev-table 'notmuch-hello-mode-abbrev-table '())
+
+(define-abbrev-table 'notmuch-message-mode-abbrev-table '())
+
+(define-abbrev-table 'notmuch-search-mode-abbrev-table '())
+
+(define-abbrev-table 'notmuch-show-mode-abbrev-table '())
+
+(define-abbrev-table 'notmuch-tree-mode-abbrev-table '())
+
+(define-abbrev-table 'oberon-mode-abbrev-table
+  '(
+    ("array" "ARRAY" indent-according-to-mode 0)
+    ("begin" "BEGIN" indent-according-to-mode 0)
+    ("boolean" "BOOLEAN" indent-according-to-mode 0)
+    ("by" "BY" indent-according-to-mode 0)
+    ("case" "CASE" indent-according-to-mode 0)
+    ("char" "CHAR" indent-according-to-mode 0)
+    ("const" "CONST" indent-according-to-mode 0)
+    ("div" "DIV" indent-according-to-mode 0)
+    ("do" "DO" indent-according-to-mode 0)
+    ("else" "ELSE" indent-according-to-mode 0)
+    ("elsif" "ELSIF" indent-according-to-mode 0)
+    ("end" "END" indent-according-to-mode 0)
+    ("exit" "EXIT" indent-according-to-mode 0)
+    ("false" "FALSE" indent-according-to-mode 0)
+    ("for" "FOR" indent-according-to-mode 0)
+    ("if" "IF" indent-according-to-mode 0)
+    ("import" "IMPORT" indent-according-to-mode 0)
+    ("in" "IN" indent-according-to-mode 0)
+    ("integer" "INTEGER" indent-according-to-mode 0)
+    ("is" "IS" indent-according-to-mode 0)
+    ("longint" "LONGINT" indent-according-to-mode 0)
+    ("longreal" "LONGREAL" indent-according-to-mode 0)
+    ("loop" "LOOP" indent-according-to-mode 0)
+    ("mod" "MOD" indent-according-to-mode 0)
+    ("module" "MODULE" indent-according-to-mode 0)
+    ("nil" "NIL" indent-according-to-mode 0)
+    ("of" "OF" indent-according-to-mode 0)
+    ("or" "OR" indent-according-to-mode 0)
+    ("pointer" "POINTER" indent-according-to-mode 0)
+    ("procedure" "PROCEDURE" indent-according-to-mode 0)
+    ("real" "REAL" indent-according-to-mode 0)
+    ("record" "RECORD" indent-according-to-mode 0)
+    ("repeat" "REPEAT" indent-according-to-mode 0)
+    ("return" "RETURN" indent-according-to-mode 0)
+    ("set" "SET" indent-according-to-mode 0)
+    ("shortint" "SHORTINT" indent-according-to-mode 0)
+    ("then" "THEN" indent-according-to-mode 0)
+    ("to" "TO" indent-according-to-mode 0)
+    ("true" "TRUE" indent-according-to-mode 0)
+    ("type" "TYPE" indent-according-to-mode 0)
+    ("until" "UNTIL" indent-according-to-mode 0)
+    ("var" "VAR" indent-according-to-mode 0)
+    ("while" "WHILE" indent-according-to-mode 0)
+    ("with" "WITH" indent-according-to-mode 0)
+   ))
+
+(define-abbrev-table 'objc-mode-abbrev-table
+  '(
+   ))
+
+(define-abbrev-table 'occur-edit-mode-abbrev-table '())
+
+(define-abbrev-table 'occur-mode-abbrev-table '())
+
+(define-abbrev-table 'org-mode-abbrev-table '())
+
+(define-abbrev-table 'outline-mode-abbrev-table '())
+
+(define-abbrev-table 'package-menu-mode-abbrev-table '())
+
+(define-abbrev-table 'pike-mode-abbrev-table
+  '(
+   ))
+
+(define-abbrev-table 'process-menu-mode-abbrev-table '())
+
+(define-abbrev-table 'prog-mode-abbrev-table '())
+
+(define-abbrev-table 'racer-help-mode-abbrev-table '())
+
+(define-abbrev-table 'rtags-dependency-tree-mode-abbrev-table '())
+
+(define-abbrev-table 'rtags-diagnostics-mode-abbrev-table '())
+
+(define-abbrev-table 'rtags-location-stack-visualize-mode-abbrev-table '())
+
+(define-abbrev-table 'rtags-mode-abbrev-table '())
+
+(define-abbrev-table 'rtags-preprocess-mode-abbrev-table '())
+
+(define-abbrev-table 'rtags-references-tree-mode-abbrev-table '())
+
+(define-abbrev-table 'rtags-taglist-mode-abbrev-table '())
+
+(define-abbrev-table 'rust-mode-abbrev-table '())
+
+(define-abbrev-table 'scss-mode-abbrev-table '())
+
+(define-abbrev-table 'select-tags-table-mode-abbrev-table '())
+
+(define-abbrev-table 'shell-mode-abbrev-table '())
+
+(define-abbrev-table 'smime-mode-abbrev-table '())
+
+(define-abbrev-table 'snippet-mode-abbrev-table '())
+
+(define-abbrev-table 'special-mode-abbrev-table '())
+
+(define-abbrev-table 'tabulated-list-mode-abbrev-table '())
+
+(define-abbrev-table 'text-mode-abbrev-table '())
+
+(define-abbrev-table 'url-cookie-mode-abbrev-table '())
+
+(define-abbrev-table 'vc-git-log-edit-mode-abbrev-table '())
+
+(define-abbrev-table 'vc-git-log-view-mode-abbrev-table '())
+
+(define-abbrev-table 'vc-git-region-history-mode-abbrev-table '())
+
+(define-abbrev-table 'web-mode-abbrev-table '())
+
+(define-abbrev-table 'xref--xref-buffer-mode-abbrev-table '())
+
+(define-abbrev-table 'ycmd-fixit-mode-abbrev-table '())
+
+(define-abbrev-table 'ycmd-view-mode-abbrev-table '())
+

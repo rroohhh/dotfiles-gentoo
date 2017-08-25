@@ -7,7 +7,7 @@
 ! -----------------------------------------------------------------------------
 
 *renderFont: true
-xterm*faceName: Hack:size=11:antialias=true
+xterm*faceName: Hack:size=25:antialias=true
 xterm*borderWidth: 0
 *font: Hack:size=11
 ! URxvt*font: xft:Hack:size=11:antialias=true

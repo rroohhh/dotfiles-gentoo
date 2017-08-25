@@ -22,7 +22,15 @@
   (evil-define-key 'insert term-mode-map "\C-n" 'self-insert-command)
   (evil-define-key 'insert term-mode-map "\C-p" 'self-insert-command)
   (evil-define-key 'normal global-map (kbd "öö") 'indent-region-or-buffer)
+  (evil-define-key 'normal global-map (kbd "s") 'evil-backward-char)
+  (evil-define-key 'normal global-map (kbd "n") 'evil-next-line)
+  (evil-define-key 'normal global-map (kbd "t") 'evil-previous-line)
+  (evil-define-key 'visual global-map (kbd "s") 'evil-backward-char)
+  (evil-define-key 'visual global-map (kbd "n") 'evil-next-line)
+  (evil-define-key 'visual global-map (kbd "t") 'evil-previous-line)
   (evil-define-key 'normal org-mode-map (kbd "ö.") 'org-edit-special)
+  (evil-define-key 'normal org-mode-map (kbd "o") 'evil-org-open-below)
+  (evil-define-key 'normal org-mode-map (kbd "O") 'evil-org-open-above)
   (evil-define-key 'insert global-map "\C-e" 'end-of-line)
   (evil-define-key 'insert global-map "\C-h" 'evil-delete-backward-char-and-join)
   (evil-define-key 'insert global-map "\C-u" 'evil-delete-line)
@@ -61,13 +69,13 @@
   :config
   (global-evil-mc-mode))
 
-(global-set-key (kbd "M-h") 'windmove-left)
+(global-set-key (kbd "M-s") 'windmove-left)
 (global-set-key (kbd "M-l") 'windmove-right)
-(global-set-key (kbd "M-j") 'windmove-down)
-(global-set-key (kbd "M-k") 'windmove-up)
+(global-set-key (kbd "M-n") 'windmove-down)
+(global-set-key (kbd "M-t") 'windmove-up)
 
 (global-set-key (kbd "M-L") 'next-buffer)
-(global-set-key (kbd "M-H") 'previous-buffer)
+(global-set-key (kbd "M-S") 'previous-buffer)
 
 ;; ToDo(robin): add keybinds for switching buffers and moving via sexps and projectile and internal helm movement/persistent option (define-key helm-mode-map [tab] 'a-command)
 
@@ -83,12 +91,24 @@
   (avy-setup-default))
 
 (use-package evil-org
-  :demand)
+  :demand
+  :config
+  (evil-define-key 'normal evil-org-mode-map (kbd "s") 'evil-backward-char)
+  (evil-define-key 'normal evil-org-mode-map (kbd "n") 'evil-next-line)
+  (evil-define-key 'normal evil-org-mode-map (kbd "t") 'evil-previous-line)
+  (evil-define-key 'visual evil-org-mode-map (kbd "s") 'evil-backward-char)
+  (evil-define-key 'visual evil-org-mode-map (kbd "n") 'evil-next-line)
+  (evil-define-key 'visual evil-org-mode-map (kbd "t") 'evil-previous-line))
 
 (use-package evil-surround
   :demand
   :config
   (global-evil-surround-mode 1))
+
+(use-package evil-goggles
+  :ensure t
+  :config
+  (evil-goggles-mode))
 
 (provide 'evil-config)
 ;;; evil-config.el ends here

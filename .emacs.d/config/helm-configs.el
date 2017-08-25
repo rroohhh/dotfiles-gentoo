@@ -25,13 +25,13 @@
   :demand
   :config
   (custom-set-variables
-   '(helm-ag-base-command "rg --vimgrep --no-heading")))
+   '(helm-ag-base-command "rg --vimgrep --no-heading --glob *.org")))
 
 (use-package helm-swoop
   :demand
   :bind (([remap isearch-forward] . helm-swoop)
 		 ([remap isearch-backward] . helm-swoop)
-		 ("M-s s" . helm-multi-swoop-all)
+		 ;("M-s s" . helm-multi-swoop-all)
 		 ("C-v C-b" . helm-buffers-list)
 		 ("C-x C-b" . helm-buffers-list)))
 (provide 'helm-configs)

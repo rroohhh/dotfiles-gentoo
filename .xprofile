@@ -1,14 +1,14 @@
-xmodmap -e "clear Shift"
-xmodmap -e "keycode 65 = Hyper_L"
-xmodmap -e "remove mod4 = Hyper_L"
-xmodmap -e "add Shift = Hyper_L"
+#xmodmap -e "clear Shift"
+#xmodmap -e "keycode 65 = Hyper_L"
+#xmodmap -e "remove mod4 = Hyper_L"
+#xmodmap -e "add Shift = Hyper_L"
 
-xmodmap -e "keycode any = space"
+#xmodmap -e "keycode any = space"
 
-xcape -e "Hyper_L=space"
+# xcape -e 'Shift_L=space;ISO_Level3_Shift=Escape;Control_L=Return'
 
-xmodmap -e "remove Control_L = Control"
+#xmodmap -e "remove Control_L = Control"
 
-xmodmap -e "keycode 50 = Hyper_R NoSymbol Hyper_R"
-xmodmap -e "add Control = Hyper_R"
-xmodmap -e "remove Control = Control_L"
+#xmodmap -e "keycode 50 = Hyper_R NoSymbol Hyper_R"
+#xmodmap -e "add Control = Hyper_R"
+#xmodmap -e "remove Control = Control_L"

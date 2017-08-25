@@ -33,3 +33,7 @@ nnoremap <silent> <M-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
 
 map öö :%pyf /usr/share/clang/clang-format.py<cr>
+
+nnoremap s h
+nnoremap n j
+nnoremap t k
