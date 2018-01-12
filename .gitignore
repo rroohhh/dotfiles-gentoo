@@ -7,3 +7,6 @@
 .config/nvim/dein/repos
 .tmux/plugins
 .tmux/resurrect
+scripts/ip_addr
+scripts/__pycache__
+

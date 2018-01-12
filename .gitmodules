@@ -1,0 +1,3 @@
+[submodule "scripts/caps2esc"]
+	path = scripts/caps2esc
+	url = git@github.com:rroohhh/caps2esc.git
