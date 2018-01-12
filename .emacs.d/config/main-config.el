@@ -171,5 +171,9 @@
 (set-variable 'fill-column 100)
 (add-hook 'org-mode 'turn-on-auto-fill)
 
+(use-package persistent-scratch
+  :config
+  (persistent-scratch-setup-default))
+
 (provide 'main-config)
 ;;; main-config.el ends here

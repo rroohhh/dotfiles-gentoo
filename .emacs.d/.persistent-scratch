@@ -1,0 +1,414 @@
+(["*scratch*" "(message \"%s\" image-types)
+  _1^2 + A_2^2 
++ 2 A_2 A_1 cos(t (ω_1 - ω_2))
+
+
+Vendorimage: N2G48C
+
+
+∂ᵢ(ϕ*∂ᵢϕ) - (∂ᵢϕ)²
+∂ᵢϕ*∂ᵢϕ + ϕ*∂ᵢ²ϕ - (∂ᵢϕ)²
+(∂ᵢϕ)² + ϕ*∂ᵢ²ϕ - (∂ᵢϕ)²
+ϕ*∂ᵢ²ϕ
+
+2.162.31.47
+
+QML debugging is enabled. Only use this in a safe environment.
+QML Debugger: Waiting for connection on port 41085...
+qml: field -5 530
+qml: field -5 465
+qml: field -5 400
+qml: field -5 335
+qml: field -5 270
+qml: field -5 205
+qml: field -5 140
+qml: field -5 75
+qml: field -5 10
+qml: field -5 530
+qml: field -5 465
+qml: field -5 400
+qml: field -5 335
+qml: field -5 270
+qml: field -5 205
+qml: field -5 140
+qml: field -5 75
+qml: field -5 10
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: {\"event\":\"list\",\"data\":[]}
+qml: hosting
+qml: {\"status\":\"ok\",\"message\":\"13\"}
+qml: {\"event\":\"client_connected\"}
+qml: {\"host_turn\":true,\"sack\":\"VDÖDILNKRBGHENUZMRJCNHEAERIHEPUSONBOWFEFLTZIÜTALEAULIDDEOUDRCHMNIQTINYDSHASRAEESGNSONIETCEEWRMKS SUIUESNGAETRXCIN EMFEÄ\",\"type\":\"init\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"host_turn\":true,\"sack\":\"VDÖDILNKRBGHENUZMRJCNHEAERIHEPUSONBOWFEFLTZIÜTALEAULIDDEOUDRCHMNIQTINYDSHASRAEESGNSONIETCEEWRMKS SUIUESNGAETRXCIN EMFEÄ\",\"type\":\"init\"}}
+qml: move: from [ -1 , -6 ], to [ 6 , 7 ]
+qml: sending move:  {\"from\":[-1,-6],\"to\":[6,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[-1,-6],\"to\":[6,7],\"type\":\"move_piece\"}}
+qrc:/Letter.qml:23: Unable to assign [undefined] to double
+qrc:/Letter.qml:33: Unable to assign [undefined] to double
+qml: ξ: 6  η: 7
+qml: move: from [ -1 , -7 ], to [ 7 , 7 ]
+qml: sending move:  {\"from\":[-1,-7],\"to\":[7,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[-1,-7],\"to\":[7,7],\"type\":\"move_piece\"}}
+qrc:/Letter.qml:23: Unable to assign [undefined] to double
+qrc:/Letter.qml:33: Unable to assign [undefined] to double
+qml: move: from [ 7 , 7 ], to [ -1 , -6 ]
+qml: sending move:  {\"from\":[7,7],\"to\":[-1,-6],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[7,7],\"to\":[-1,-6],\"type\":\"move_piece\"}}
+qrc:/Letter.qml:23: Unable to assign [undefined] to double
+qrc:/Letter.qml:33: Unable to assign [undefined] to double
+qml: move: from [ 6 , 7 ], to [ -1 , -7 ]
+qml: sending move:  {\"from\":[6,7],\"to\":[-1,-7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[6,7],\"to\":[-1,-7],\"type\":\"move_piece\"}}
+qrc:/Letter.qml:23: Unable to assign [undefined] to double
+qrc:/Letter.qml:33: Unable to assign [undefined] to double
+qml: move: from [ -1 , -4 ], to [ 6 , 7 ]
+qml: sending move:  {\"from\":[-1,-4],\"to\":[6,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[-1,-4],\"to\":[6,7],\"type\":\"move_piece\"}}
+qrc:/Letter.qml:23: Unable to assign [undefined] to double
+qrc:/Letter.qml:33: Unable to assign [undefined] to double
+qml: ξ: 6  η: 7
+qml: move: from [ -1 , -6 ], to [ 7 , 7 ]
+qml: sending move:  {\"from\":[-1,-6],\"to\":[7,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[-1,-6],\"to\":[7,7],\"type\":\"move_piece\"}}
+qrc:/Letter.qml:23: Unable to assign [undefined] to double
+qrc:/Letter.qml:33: Unable to assign [undefined] to double
+qml: ξ: 7  η: 7
+qml: move: from [ -1 , -7 ], to [ 8 , 7 ]
+qml: sending move:  {\"from\":[-1,-7],\"to\":[8,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[-1,-7],\"to\":[8,7],\"type\":\"move_piece\"}}
+qrc:/Letter.qml:23: Unable to assign [undefined] to double
+qrc:/Letter.qml:33: Unable to assign [undefined] to double
+qml: ξ: 8  η: 7
+qml: move: from [ -1 , -1 ], to [ 9 , 7 ]
+qml: sending move:  {\"from\":[-1,-1],\"to\":[9,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[-1,-1],\"to\":[9,7],\"type\":\"move_piece\"}}
+qrc:/Letter.qml:23: Unable to assign [undefined] to double
+qrc:/Letter.qml:33: Unable to assign [undefined] to double
+qml: ξ: 9  η: 7
+qml: move: from [ -1 , -3 ], to [ 10 , 7 ]
+qml: sending move:  {\"from\":[-1,-3],\"to\":[10,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[-1,-3],\"to\":[10,7],\"type\":\"move_piece\"}}
+qrc:/Letter.qml:23: Unable to assign [undefined] to double
+qrc:/Letter.qml:33: Unable to assign [undefined] to double
+qml: move: from [ 10 , 7 ], to [ 11 , 7 ]
+qml: sending move:  {\"from\":[10,7],\"to\":[11,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[10,7],\"to\":[11,7],\"type\":\"move_piece\"}}
+qml: ξ: 11  η: 7
+qml: move: from [ 9 , 7 ], to [ 10 , 7 ]
+qml: sending move:  {\"from\":[9,7],\"to\":[10,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[9,7],\"to\":[10,7],\"type\":\"move_piece\"}}
+qml: ξ: 10  η: 7
+qml: move: from [ 8 , 7 ], to [ 9 , 7 ]
+qml: sending move:  {\"from\":[8,7],\"to\":[9,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[8,7],\"to\":[9,7],\"type\":\"move_piece\"}}
+qml: ξ: 9  η: 7
+qml: move: from [ 7 , 7 ], to [ 8 , 7 ]
+qml: sending move:  {\"from\":[7,7],\"to\":[8,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[7,7],\"to\":[8,7],\"type\":\"move_piece\"}}
+qml: ξ: 8  η: 7
+qml: move: from [ 6 , 7 ], to [ 7 , 7 ]
+qml: sending move:  {\"from\":[6,7],\"to\":[7,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[6,7],\"to\":[7,7],\"type\":\"move_piece\"}}
+qml: {\"type\":\"end_round\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"type\":\"end_round\"}}
+qml: round ended
+qml: along_x: true
+qml: E 7 7
+qml: I 8 7
+qml: N 9 7
+qml: E 10 7
+qml: M 11 7
+qml: ξ: 7  η: 7
+qml: ξ: 7  η: 7
+qml: move: from [ 8 , 7 ], to [ 8 , 6 ]
+qml: sending move:  {\"from\":[8,7],\"to\":[8,6],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[8,7],\"to\":[8,6],\"type\":\"move_piece\"}}
+qml: move: from [ 8 , 6 ], to [ 8 , 7 ]
+qml: sending move:  {\"from\":[8,6],\"to\":[8,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[8,6],\"to\":[8,7],\"type\":\"move_piece\"}}
+qml: ξ: 8  η: 7
+qml: move: from [ 9 , 7 ], to [ 9 , 6 ]
+qml: sending move:  {\"from\":[9,7],\"to\":[9,6],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[9,7],\"to\":[9,6],\"type\":\"move_piece\"}}
+qml: move: from [ 9 , 6 ], to [ 9 , 7 ]
+qml: sending move:  {\"from\":[9,6],\"to\":[9,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[9,6],\"to\":[9,7],\"type\":\"move_piece\"}}
+qml: ξ: 9  η: 7
+qml: move: from [ 8 , 7 ], to [ 8 , 6 ]
+qml: sending move:  {\"from\":[8,7],\"to\":[8,6],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[8,7],\"to\":[8,6],\"type\":\"move_piece\"}}
+qml: move: from [ 8 , 6 ], to [ 8 , 7 ]
+qml: sending move:  {\"from\":[8,6],\"to\":[8,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[8,6],\"to\":[8,7],\"type\":\"move_piece\"}}
+qml: move: from [ 8 , 7 ], to [ -1 , -7 ]
+qml: sending move:  {\"from\":[8,7],\"to\":[-1,-7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[8,7],\"to\":[-1,-7],\"type\":\"move_piece\"}}
+qrc:/Letter.qml:23: Unable to assign [undefined] to double
+qrc:/Letter.qml:33: Unable to assign [undefined] to double
+qml: move: from [ -1 , -7 ], to [ 8 , 7 ]
+qml: sending move:  {\"from\":[-1,-7],\"to\":[8,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[-1,-7],\"to\":[8,7],\"type\":\"move_piece\"}}
+qrc:/Letter.qml:23: Unable to assign [undefined] to double
+qrc:/Letter.qml:33: Unable to assign [undefined] to double
+qml: move: from [ 8 , 7 ], to [ 14 , 7 ]
+qml: sending move:  {\"from\":[8,7],\"to\":[14,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[8,7],\"to\":[14,7],\"type\":\"move_piece\"}}
+qml: move: from [ 14 , 7 ], to [ 8 , 7 ]
+qml: sending move:  {\"from\":[14,7],\"to\":[8,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[14,7],\"to\":[8,7],\"type\":\"move_piece\"}}
+qml: move: from [ 8 , 7 ], to [ 14 , 7 ]
+qml: sending move:  {\"from\":[8,7],\"to\":[14,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[8,7],\"to\":[14,7],\"type\":\"move_piece\"}}
+qml: move: from [ 14 , 7 ], to [ -1 , -7 ]
+qml: sending move:  {\"from\":[14,7],\"to\":[-1,-7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[14,7],\"to\":[-1,-7],\"type\":\"move_piece\"}}
+qrc:/Letter.qml:23: Unable to assign [undefined] to double
+qrc:/Letter.qml:33: Unable to assign [undefined] to double
+qml: move: from [ -1 , -7 ], to [ 8 , 7 ]
+qml: sending move:  {\"from\":[-1,-7],\"to\":[8,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[-1,-7],\"to\":[8,7],\"type\":\"move_piece\"}}
+qrc:/Letter.qml:23: Unable to assign [undefined] to double
+qrc:/Letter.qml:33: Unable to assign [undefined] to double
+qml: move: from [ 8 , 7 ], to [ 8 , 8 ]
+qml: sending move:  {\"from\":[8,7],\"to\":[8,8],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[8,7],\"to\":[8,8],\"type\":\"move_piece\"}}
+qml: move: from [ 8 , 8 ], to [ 8 , 7 ]
+qml: sending move:  {\"from\":[8,8],\"to\":[8,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[8,8],\"to\":[8,7],\"type\":\"move_piece\"}}
+qml: ξ: 8  η: 7
+qml: move: from [ 9 , 7 ], to [ 9 , 8 ]
+qml: sending move:  {\"from\":[9,7],\"to\":[9,8],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[9,7],\"to\":[9,8],\"type\":\"move_piece\"}}
+qml: move: from [ 9 , 8 ], to [ 9 , 7 ]
+qml: sending move:  {\"from\":[9,8],\"to\":[9,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[9,8],\"to\":[9,7],\"type\":\"move_piece\"}}
+qml: ξ: 9  η: 7
+qml: move: from [ 8 , 7 ], to [ 8 , 8 ]
+qml: sending move:  {\"from\":[8,7],\"to\":[8,8],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[8,7],\"to\":[8,8],\"type\":\"move_piece\"}}
+qml: move: from [ 8 , 8 ], to [ 8 , 7 ]
+qml: sending move:  {\"from\":[8,8],\"to\":[8,7],\"type\":\"move_piece\"}
+qml: sending:  { \"action\": \"send\", \"data\": {\"from\":[8,8],\"to\":[8,7],\"type\":\"move_piece\"}}
+
+
+
+
+fix joker popup lol
+
+
+Als documentclass verwende ich ```scrartcl``` und als font ```crimson```.
+Die Graphiken sind alle in ```tikz``` gemacht.
+Generell ein paar Empfehlungen:
+Wenn du keinen extra latex Editor benutzt ist ```latexmk``` sehr praktisch zum kompilieren. 
+Zum Erstellen der ```tikz```-Graphiken benutze ich immer eine leere Datei, da dieser deutlich schneller kompiliert, als das komplette Dokument. Mit ```latexmk -pvc file.tex``` wird die Datei automatisch bei einer Änderung kompiliert und der pdf-Viewer neugestartet.
+Ein sehr gutes Paket für Zahlen, Winkel und Einheiten ist ```siunitx```.
+Um die Seitenränder so zu bekommen wie ich sie hab (default sind die sehr groß) muss man bei ```scrartcl``` ```DIV=14``` als Option angeben.
+Mit dem pagestyle ```scrheadings``` bekommt man oben eine Header mit section Name und Seitenzahl.
+Dinge die du sehr oft schreibst (zum Beispiel ```\\varepsilon```) kann man leicht zu einem neuen command zusammenfassen: ```\\newcommand{\\name}[zahl der argumente]{\\bla\\bla Argument 1,2,\\dots: #1,#2,\\dots}```
+Für Definitionen, Lemma, Bewerkungen, etc. benutze ich ```ntheorem```, das hat bei mir besser funktioniert als ```amsthm```.
+Für die \"Wichtig\" und \"Achtung\" Boxen benutze ich ```bclogo```, das ist genau dafür gemacht.
+Außerdem ist es sehr praktisch, wenn dein Editor snippets unterstützt, also wenn du eine bestimmte Zeichenfolge getippt hast und dann eine bestimmte Tastenkombination drückst, dann diese Zeichenfolge durch eine andere ersetzt wird. Zum Beispiel ```sqrt| -> \\sqrt{|}```, 
+```align| -> 
+\\begin{align*}
+|
+\\end{align*}
+```
+(| stellt in diesem Fall die Cursor Position dar)
+
+
+qemu-xlnx.git/aarch64-softmmu/qemu-system-aarch64 -M arm-generic-fdt-7series -machine linux=on -serial /dev/null -serial mon:stdio -nographic -dtb BOOT.fs/devicetree.dtb -kernel BOOT.fs/zImage -drive if=sd,format=raw,index=0,file=IMAGE.dd -boot mode=5 -append \"root=/dev/mmcblk0p2 rw rootwait rootfstype=ext4\"
+
+
+joker changing support
+bonus only when all nine letters were taken
+bonus not counted for for one player
+new game button -> end game button in game, same as end round, but end 
+
+C
+D
+E
+T
+D
+J
+A
+U
+S
+
+JSTEOBEDC
+
+
+
+[cm für n schwingungen]
+----------------------- = [cm für eine schwingung]
+         [n]
+
+[cm für eine schwingung] * [sec pro cm] = [sec pro schwingung] = [Periodendauer]
+
+
+                      2π * [n]                 2π * [n] * [cm pro sec]             
+[ω] = -------------------------------------- = -----------------------
+      [cm für n schwingungen] * [sec pro cm]   [cm für n schwingungen]
+
+
+ω_P = m g l / (I_z ω_F)
+2π / T_p = m g l (I_z ω_F)
+T_p = 2π I_z ω F / (m g l)
+a = 2π I_z / (m g l)
+
+
+1/(k_0 * k_1) {{exp(-i*k_0*d_0), 0}, {0, exp(i*k_0*d_0)}} * {{k_0 + k_1, k_0 - k_1},{k_0 - k_1, k_0}}*  {{exp(-i*k_1*d_1), 0}, {0, exp(i*k_1*d_1)}} 
+
+
+ρ = 2Z M / (n a)
+a = 4π ε h^2 / (μ e^2)
+
+ρ = Z M μ e^2 / (n 2π ε h^2)
+
+Brigitte+Lukas Festnetz: 06084/9005252
+
+Samstag 13:30 Brigitte+Lukas
+zz
+
+
+
+
+
+
+
+
+
+337,-
+
+
+175,-
+
+
+
+kkkkkk
+
+
+Ψ∮∮∮∮∮∮∮⊊Rℝ
+
+type State = Shit | Good | Two | Three
+
+state : State
+
+let
+  a = rtiena
+  b = case state of
+  Good -> a
+  Bad -> { a | z = rleinsa }
+in
+
+
+lambda
+
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAAB
+G5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+QyNTUxOQAAACCWpoDclbYC
+37f6Cs+n724wvjHalt3qSpTY6y7agSDqBAAAAJDwER7d8BEe
+3QAAAAt
+zc2gtZWQyNTUxOQAAACCWpoDclbYC37f6Cs+n724wvjHalt3qSpTY6y7agSDqBA
+AAAECvGHyTRuSHbb8EqQ
+AvUe6HtfMwqJ7otNTN1vHGU196o5amgNyVtgLft/oKz6fvbjC+
+MdqW3epKlNjrLtqBIOoEAAAACG5laW5AbWFlAQIDBAU=
+-----END OPENSSH PRIVATE KEY-----
+
+
+ZED_5V 4.8828 V
+[1f40] +10.1562 mV
+[104] +677.08 mA BETA_5V 4.8828 V
+[1f40] +1.2891 mV
+[021] +85.94 mA HDN 3.2812 V
+[1500] +0.0000 mV
+[000] +0.00 mA PCIE_N_V 3.2422 V
+[14c0] +0.0000 mV
+[000] +0.00 mA HDS 3.2031 V
+[1480] +0.0000 mV
+[000] +0.00 mA PCIE_S_V 3.2422 V
+[14c0] +0.0000 mV
+[000] +0.00 mA RFW_V 3.2422 V
+[14c0] -0.0391 mV
+[fff] -2.60 mA IOW_V 3.2617 V
+[14e0] +0.0000 mV
+[000] +0.00 mA RFE_V 3.2422 V
+[14c0] +0.0000 mV
+[000] +0.00 mA IOE_V 3.2812 V
+[1500] +0.0000 mV
+[000] +0.00 mA VCCO_35 2.4219 V
+[ f80] -0.0391 mV
+[fff] -2.60 mA VCCO_13 2.4609 V
+[ fc0] +0.0000 mV
+[000] +0.00 mA PCIE_IO 2.4609 V
+[ fc0] -0.0781 mV
+[ffe] -5.21 mA VCCO_34 2.4609 V
+[ fc0] +0.9766 mV
+[019] +65.10 mA W_VW 2.7734 V
+[11c0] +0.0000 mV
+[000] +0.00 mA N_VW 2.8125 V
+[1200] +0.0000 mV
+[000] +0.00 mA N_VN 2.7734 V
+[11c0] -0.0391 mV
+[fff] -2.60 mA N_VE 2.8516 V
+[1240] +0.0000 mV
+[000] +0.00 mA E_VE 2.6953 V
+[1140] -0.0391 mV
+[fff] -2.60 mA S_VE 2.8516 V
+[1240] +0.0000 mV
+[000] +0.00 mA S_VS 2.7344 V
+[1180] -0.0391 mV
+[fff] -2.60 mA S_VW 2.8516 V
+[1240] -0.0781 mV
+[ffe] -5.21 mA
+
+W_VW 2.4609 V
+[ fc0] -0.0391 mV
+[fff] -2.60 mA N_VW 3.2422 V
+[14c0] +0.0000 mV
+[000] +0.00 mA N_VN 1.8750 V
+[ c00] -0.0391 mV
+[fff] -2.60 mA N_VE 3.2617 V
+[14e0] +0.0000 mV
+[000] +0.00 mA E_VE 3.2812 V
+[1500] +0.0391 mV
+[001] +2.60 mA S_VE 1.9922 V
+[ cc0] +0.0000 mV
+[000] +0.00 mA S_VS 2.9883 V
+[1320] -0.0391 mV
+[fff] -2.60 mA S_VW 1.9531 V
+[ c80] -0.1172 mV
+[ffd] -7.81 mA
+
+
+
+Yeah that makes sense, but we should figure out, why we can't use the on-chip termination and how to enable/disable it.
+
+I believe kicad has an internal tool to calculate estimates for impedance or find width and height parameters to match a certain impedance, so keeping the impedance in check should be not too difficult aside from physical constrains on trace width and height." (30 . 30) lisp-interaction-mode nil nil])

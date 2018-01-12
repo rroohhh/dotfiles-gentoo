@@ -108,7 +108,13 @@
 (use-package evil-goggles
   :ensure t
   :config
-  (evil-goggles-mode))
+  (evil-goggles-mode)
+  (evil-goggles-use-diff-faces))
+
+(use-package evil-terminal-cursor-changer
+  :config
+  (unless (display-graphic-p)
+	(etcc-on)))
 
 (provide 'evil-config)
 ;;; evil-config.el ends here

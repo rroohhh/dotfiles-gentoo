@@ -58,10 +58,13 @@ bindsym $mod+Shift+q kill
 bindsym XF86MonBrightnessUp exec zsh -c '/home/robin/projects/hwinfo/bin/hwinfo backlight brightness $(($(/home/robin/projects/hwinfo/bin/hwinfo backlight brightness) + 50))'
 bindsym XF86MonBrightnessDown exec zsh -c '/home/robin/projects/hwinfo/bin/hwinfo backlight brightness $(($(/home/robin/projects/hwinfo/bin/hwinfo backlight brightness) - 50))'
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +5% 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% 
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% 
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -- sset Master playback 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -- sset Master playback 5%-
 #bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5%
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioMute exec --no-startup-id amixer -- sset Master toggle
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
@@ -75,7 +78,7 @@ bindsym $mod+minus scratchpad show
 # bindsym $mod+Shift+h exec i3lock -f -u -r 40 -s 20 && systemctl hibernate
 
 # start rofi (a program launcher)
-bindsym $mod+d exec rofi -show run 
+bindsym $mod+o exec rofi -show run 
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -247,7 +250,7 @@ bar {
   position top
   workspace_buttons yes
   # status_command i3status -c ~/.i3/i3status.conf
-  status_command i3blocks
+  status_command /usr/local/bin/i3blocks
   font pango:Hack, FontAwesome 11
   strip_workspace_numbers yes
 
@@ -322,6 +325,7 @@ exec bash /home/robin/.bashrc
 # exec --no-startup-id  "sleep 1; i3-msg '[instance=tinyterm] mark tinyterm_scratch, move scratchpad'"
 # exec --no-startup-id "sleep 2; unset TMUX; tmux new"
 exec emacsclient -c
+exec unclutter -reset
 # exec compton -b
 #exec /usr/bin/e
 # exec /usr/bin/chromium

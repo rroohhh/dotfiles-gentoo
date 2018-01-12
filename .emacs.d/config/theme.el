@@ -4,7 +4,8 @@
 ;;; Code:
 
 ;; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-(load-theme 'gruvbox-dark t)
+(load-theme 'gruvbox t)
+;; (load-theme 'gruvbox t)
 
 ;; (use-package gruvbox-theme
 ;;   :demand

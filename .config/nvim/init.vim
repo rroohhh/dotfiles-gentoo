@@ -10,6 +10,9 @@ set expandtab
 set autoindent
 set encoding=utf-8
 set laststatus=2
+set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
+" set termguicolors
+
 
 set runtimepath+=/home/robin/.config/nvim/dein/repos/github.com/Shougo/dein.vim
 
@@ -19,8 +22,24 @@ call dein#add('Shougo/dein.vim')
 call dein#add('arakashic/chromatica.nvim')
 call dein#add('morhetz/gruvbox')
 call dein#add('christoomey/vim-tmux-navigator')
+call dein#add('rust-lang/rust.vim')
+call dein#add('Shougo/deoplete.nvim')
+call dein#add('zchee/deoplete-jedi')
+call dein#add('sebastianmarkow/deoplete-rust')
+call dein#add('metakirby5/codi.vim')
+call dein#add('ElmCast/elm-vim')
+call dein#add('kien/rainbow_parentheses.vim')
 
 call dein#end()
+
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#rust#racer_binary='/usr/bin/racer'
+let g:deoplete#sources#rust#rust_source_path='/usr/src/rust/src'
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 filetype plugin indent on
 syntax enable

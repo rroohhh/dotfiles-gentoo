@@ -20,8 +20,8 @@
 (setq org-confirm-babel-evaluate nil)
 
 (org-babel-do-load-languages
-   'org-babel-load-languages
-   '((python . t)))
+ 'org-babel-load-languages
+ '((python . t)))
 
 (use-package org-bullets
   :demand)
@@ -72,6 +72,12 @@ and replace it with a link to the newly created file"
 	(insert xxx)
 	(save-buffer)))
 
+(defun fix-inline-org-images ()
+  (when org-inline-image-overlays
+    (org-redisplay-inline-images)))
+
+(eval-after-load 'org
+  (add-hook 'org-babel-after-execute-hook 'fix-inline-org-images))
 
 (provide 'org-config)
 ;;; org-config.el ends here
