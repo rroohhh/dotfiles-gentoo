@@ -17,6 +17,10 @@ plugins=(git vi-mode zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+HISTSIZE=1000000000
+SAVEHIST=1000000000
+
+
 zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=*'
 
 # You may need to manually set your language environment
@@ -27,13 +31,14 @@ export EDITOR='nvim'
 
 source ~/prompt.sh
 
-export PATH=$PATH:/home/robin/projects/hwinfo/bin:/home/robin/.fzf/bin/:/home/robin/projects/exa/target/release:/home/robin/node_modules/.bin
+export PATH=$PATH:/home/robin/projects/hwinfo/bin:/home/robin/.fzf/bin/:/home/robin/projects/exa/target/release:/home/robin/node_modules/.bin:/home/robin/.local/bin:/home/robin/.cargo/bin
 alias f='vim $(fzf)'
 alias wr='wget -r -nc'
 alias vi=nvim
 alias vim=nvim
 alias ls=exa
-alias l="exa -la"
+alias l="exa -la --git"
+# alias cat=bat
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -69,9 +74,14 @@ ix() {
 }
 bindkey -M vicmd -- t up-line-or-history
 bindkey -M vicmd -- n down-line-or-history
+bindkey -M vicmd -- s backward-char
+bindkey -M vicmd -- l forward-char
 
 if [ -z "$TMUX" ]; then; tmux new-session -t robin_main; fi;
 alias mnt="mount | column  --table-columns DEVICE,STATUS,PATH,' ',TYPE,OPTIONS -o ' │ ' -t"
+
+alias epgbiäd="setxkbmap de"
+
 REPORTTIME=10
 
 # added by travis gem

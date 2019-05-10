@@ -12,6 +12,8 @@ set encoding=utf-8
 set laststatus=2
 set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
 " set termguicolors
+set list
+set listchars=tab:>-
 
 
 set runtimepath+=/home/robin/.config/nvim/dein/repos/github.com/Shougo/dein.vim
@@ -32,6 +34,7 @@ call dein#add('kien/rainbow_parentheses.vim')
 
 call dein#end()
 
+let g:gruvbox_contrast_dark = 'medium'
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#rust#racer_binary='/usr/bin/racer'
 let g:deoplete#sources#rust#rust_source_path='/usr/src/rust/src'

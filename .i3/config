@@ -246,11 +246,16 @@ bindsym $mod+r mode "resize"
 # }
 #
 
+
+bindsym $mod+c bar mode invisible toggle
+
+for_window [ title="^pdfpc - present" ] border none floating enable
+
 bar {
   position top
   workspace_buttons yes
   # status_command i3status -c ~/.i3/i3status.conf
-  status_command /usr/local/bin/i3blocks
+  status_command i3blocks
   font pango:Hack, FontAwesome 11
   strip_workspace_numbers yes
 

@@ -3,10 +3,10 @@
 
 ;;; Code:
 (require 'package)
-(setq package-archives '(("melpa" . "http://melpa.org/packages/")
-						 ("org" . "http://orgmode.org/elpa/")
-						 ("marmalade" . "http://marmalade-repo.org/packages/")
-						 ("gnu" . "http://elpa.gnu.org/packages/")))
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+						 ("org" . "https://orgmode.org/elpa/")
+						 ("marmalade" . "https://marmalade-repo.org/packages/")
+						 ("gnu" . "https://elpa.gnu.org/packages/")))
 
 (package-initialize)
 
@@ -73,17 +73,21 @@
  '(describe-char-unidata-list
    (quote
 	(name old-name general-category decomposition decimal-digit-value digit-value numeric-value)))
+ '(global-hl-line-mode t)
+ '(helm--remap-mouse-mode t)
  '(helm-ag-base-command "rg --vimgrep --no-heading")
  '(package-selected-packages
    (quote
-	(persistent-scratch json-mode go-mode oberon evil-goggles evil json-reformat cargo rust-mode evil-surround ycmd-eldoc org commenter fzf counsel ivy ivy-mode beacon adaptive-wrap ievil-iedit-state evil-iedit-state auto-insert zenburn-theme ws-butler web-mode web-beautify use-package spaceline smart-mode-line-powerline-theme smart-comment rtags real-auto-save rainbow-delimiters pretty-mode org-bullets org-beautify-theme notmuch nlinum-relative modern-cpp-font-lock magit linum-relative latex-preview-pane irony-eldoc iedit hungry-delete helm-swoop helm-projectile helm-ag gruvbox-theme gnuplot-mode git-gutter flycheck-ycmd flycheck-irony fancy-battery f expand-region evil-smartparens evil-org evil-mc evil-matchit evil-god-state company-ycmd company-try-hard company-statistics company-irony-c-headers company-irony company-auctex cmake-mode cmake-ide clang-format avy)))
+	(company-tern scad-mode yaml-mode spinner wolfram-mode org-plus-contrib typescript-mode ob-rust dts-mode which-key persistent-scratch json-mode go-mode oberon evil-goggles evil json-reformat cargo rust-mode evil-surround ycmd-eldoc org commenter fzf counsel ivy ivy-mode beacon adaptive-wrap ievil-iedit-state evil-iedit-state auto-insert zenburn-theme ws-butler web-mode web-beautify use-package spaceline smart-mode-line-powerline-theme smart-comment rtags real-auto-save rainbow-delimiters pretty-mode org-bullets org-beautify-theme notmuch nlinum-relative modern-cpp-font-lock magit linum-relative latex-preview-pane irony-eldoc iedit hungry-delete helm-swoop helm-projectile helm-ag gruvbox-theme gnuplot-mode git-gutter flycheck-ycmd flycheck-irony fancy-battery f expand-region evil-smartparens evil-org evil-mc evil-matchit evil-god-state company-ycmd company-try-hard company-statistics company-irony-c-headers company-irony company-auctex cmake-mode cmake-ide clang-format avy)))
  '(send-mail-function (quote smtpmail-send-it))
- '(smtpmail-smtp-server "securesmtp.t-online.de"))
+ '(smtpmail-smtp-server "securesmtp.t-online.de")
+ '(spaceline-helm-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(evil-goggles-change-face ((t (:inherit diff-removed))))
  '(evil-goggles-delete-face ((t (:inherit diff-removed))))
  '(evil-goggles-paste-face ((t (:inherit diff-added))))
  '(evil-goggles-undo-redo-add-face ((t (:inherit diff-added))))
@@ -94,3 +98,4 @@
  '(helm-source-header ((t (:foreground "#d5c4a1" :height 1.3)))))
 
 (provide 'init)
+(put 'downcase-region 'disabled nil)

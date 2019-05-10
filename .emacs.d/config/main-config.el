@@ -85,6 +85,8 @@
 
 ;; always show matching brackets
 (show-paren-mode 1)
+;; highlight whole expression; makes it easier to find the matching braket and debug missing brakets
+(setq show-paren-style 'expression)
 
 ;; no linenumbers in shell
 (add-hook 'shell-mode-hook (linum-mode 0))
@@ -171,9 +173,31 @@
 (set-variable 'fill-column 100)
 (add-hook 'org-mode 'turn-on-auto-fill)
 
-(use-package persistent-scratch
+;;;  obsolete
+;; (use-package persistent-scratch
+;;   :config
+;;   (persistent-scratch-setup-default))
+(setq remember-notes-auto-save-visited-file-name t
+      remember-notes-buffer-name "*scratch*")
+(setq initial-buffer-choice
+      (lambda () (kill-buffer remember-notes-buffer-name)
+                 (remember-notes)))
+
+;(setq remember-notes-buffer-name "*scratch*")
+;(setq initial-buffer-choice 'remember-notes)
+
+(use-package which-key
   :config
-  (persistent-scratch-setup-default))
+  (which-key-mode))
+
+(use-package dts-mode
+  :demand)
+
+(use-package yaml-mode
+  :demand)
+
+(use-package scad-mode
+  :demand)
 
 (provide 'main-config)
 ;;; main-config.el ends here

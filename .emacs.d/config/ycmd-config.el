@@ -8,7 +8,7 @@
   :init
   (set-variable 'ycmd-global-config "/home/robin/.ycm_extra_conf.py")
   (set-variable 'ycmd-server-command '("python" "/home/robin/projects/ycmd/ycmd"))
-  (set-variable 'ycmd-rust-src-path "/usr/src/rustc-1.14.0/src")
+  (set-variable 'ycmd-rust-src-path "/home/robin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src")
   ;; (setq ycmd-force-semantic-completion nil)
   :config
   (add-hook 'after-init-hook #'global-ycmd-mode)

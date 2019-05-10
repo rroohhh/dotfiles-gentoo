@@ -21,9 +21,12 @@
 
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((python . t)))
+ '((python . t) (rust . t) (C . t) (gnuplot . t) (mathematica . t)))
 
 (use-package org-bullets
+  :demand)
+
+(use-package ob-rust
   :demand)
 
 (defun org-if-not-special (action)
@@ -52,14 +55,14 @@
 			(make-variable-buffer-local 'yas-trigger-key)
 			(setq yas-trigger-key [tab])
 			(add-to-list 'org-tab-first-hook 'yas-org-very-safe-expand)
-			(define-key yas-keymap [tab] 'yas-next-field-or-maybe-expand)))
+			(define-key yas-keymap [tab] 'yas-next-field-or-maybe-expand)
+			(rainbow-delimiters-mode-enable)))
 
 ;; (use-package org-beautify-theme
 ;;   :demand)
 
 (defun org-move-tree (filename)
-  "move the sub-tree which contain the point to FILENAME,
-and replace it with a link to the newly created file"
+  "Move the sub-tree which contain the point to FILENAME and replace it with a link to the newly created file."
   (interactive "F")
   (org-mark-subtree)
   (let

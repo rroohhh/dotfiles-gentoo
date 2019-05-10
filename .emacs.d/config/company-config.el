@@ -28,5 +28,10 @@
   :config
   (add-hook 'after-init-hook 'company-statistics-mode))
 
+(use-package company-tern
+  :demand
+  :config
+  (add-to-list 'company-backends 'company-tern))
+
 (provide 'company-config)
 ;;; company-config.el ends here

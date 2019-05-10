@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/robin/projects/FerrofluidSimulation/lib/glfw/CMake'
-let g:netrw_dirhist_2='/home/robin/projects/FerrofluidSimulation/src'
-let g:netrw_dirhist_3='/home/robin/tmp'
-let g:netrw_dirhist_4='/etc/mopidy'
-let g:netrw_dirhist_5='/home/robin/study/lectures/math_introduction'
-let g:netrw_dirhist_6='/home/robin/study/pdfs/.git'
-let g:netrw_dirhist_7='/home/robin/tmp/test'
