@@ -2,4 +2,3 @@
 .tmux/resurrect
 scripts/ip_addr
 scripts/__pycache__
-scripts/caps2esc
