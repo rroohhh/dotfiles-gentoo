@@ -21,13 +21,21 @@
   (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
   (evil-define-key 'insert term-mode-map "\C-n" 'self-insert-command)
   (evil-define-key 'insert term-mode-map "\C-p" 'self-insert-command)
+  (evil-define-key 'normal global-map (kbd "Q") 'outline-toggle-children)
   (evil-define-key 'normal global-map (kbd "öö") 'indent-region-or-buffer)
+
   (evil-define-key 'normal global-map (kbd "s") 'evil-backward-char)
   (evil-define-key 'normal global-map (kbd "n") 'evil-next-line)
   (evil-define-key 'normal global-map (kbd "t") 'evil-previous-line)
+
   (evil-define-key 'visual global-map (kbd "s") 'evil-backward-char)
   (evil-define-key 'visual global-map (kbd "n") 'evil-next-line)
   (evil-define-key 'visual global-map (kbd "t") 'evil-previous-line)
+
+  (define-key evil-motion-state-map (kbd "h") 'nil)
+  (define-key evil-motion-state-map (kbd "j") 'nil)
+  (define-key evil-motion-state-map (kbd "k") 'nil)
+
   (evil-define-key 'normal org-mode-map (kbd "ö.") 'org-edit-special)
   (evil-define-key 'normal org-mode-map (kbd "o") 'evil-org-open-below)
   (evil-define-key 'normal org-mode-map (kbd "O") 'evil-org-open-above)
@@ -37,6 +45,13 @@
   (add-hook 'evil-insert-state-entry-hook (lambda () (if buffer-file-name (save-buffer))))
   (add-hook 'evil-insert-state-exit-hook (lambda () (if buffer-file-name (save-buffer))))
   (defalias #'forward-evil-word #'forward-evil-symbol))
+
+(use-package evil-collection
+  :after evil
+  :ensure t
+  :config
+  (evil-collection-init))
+
 
 (use-package god-mode
   :demand)

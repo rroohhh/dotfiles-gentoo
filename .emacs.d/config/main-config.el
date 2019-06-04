@@ -199,5 +199,18 @@
 (use-package scad-mode
   :demand)
 
+
+(defun py-outline-level ()
+  (let (buffer-invisibility-spec)
+    (save-excursion
+      (skip-chars-forward "\t ")
+      (current-column))))
+(defun my-pythonFold-hook ()
+  (setq outline-regexp "[^ \t\n]\\|[ \t]*\\(def[ \t]+\\|class[ \t]+\\)")
+  (setq outline-level 'py-outline-level)
+  (outline-minor-mode t))
+(add-hook 'python-mode-hook 'my-pythonFold-hook)
+
+
 (provide 'main-config)
 ;;; main-config.el ends here

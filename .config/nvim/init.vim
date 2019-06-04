@@ -59,3 +59,15 @@ map öö :%pyf /usr/share/clang/clang-format.py<cr>
 nnoremap s h
 nnoremap n j
 nnoremap t k
+
+nnoremap h <Nop>
+nnoremap j <Nop>
+nnoremap k <Nop>
+
+vnoremap s h
+vnoremap n j
+vnoremap t k
+
+vnoremap h <Nop>
+vnoremap j <Nop>
+vnoremap k <Nop>

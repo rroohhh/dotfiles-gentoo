@@ -13,7 +13,8 @@
   (global-set-key (kbd "<C-return>") 'company-complete)
   (add-hook 'after-init-hook (lambda ()
 							   (add-to-list 'company-backends 'company-elisp)
-							   (setq company-begin-commands ()))))
+							   (setq company-begin-commands t)
+							   (setq company-idle-delay 0)))
 
 
 (use-package company-try-hard
