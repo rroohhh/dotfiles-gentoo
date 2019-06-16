@@ -250,6 +250,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+c bar mode invisible toggle
 
 for_window [ title="^pdfpc - present" ] border none floating enable
+for_window [ title="^org.anbox.*" ] border none floating enable
 
 bar {
   position top
